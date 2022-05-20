@@ -308,7 +308,7 @@ export class Query extends Builder {
 		let prefix: string[] = split[0].split(this._prefix)
 		let alias: IObject = this._options['alias'] || {}
 		let join: any = this._options['join'] || {}
-		let name: string = ''
+		let name: string = split[0]
 		if (prefix.length === 1) {
 			//没有表前缀
 			name = `${this._prefix}${split[0]}` //加上前缀
